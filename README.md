@@ -5,7 +5,7 @@ Building etcd server container for an atomic host:
 ```
 # git clone https://github.com/aveshagarwal/etcd-atomic
 # cd etcd-container
-# docker build --rm --t etcd .
+# docker build --rm -t etcd .
 ```
 
 Installing etcd container on atomic host:
