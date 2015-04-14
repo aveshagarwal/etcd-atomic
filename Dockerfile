@@ -11,7 +11,7 @@ LABEL Vendor="Red Hat"
 
 LABEL INSTALL="docker run --rm --privileged -v /:/host -e HOST=/host -e IMAGE=IMAGE -e NAME=NAME IMAGE /usr/bin/install.sh"
 LABEL UNINSTALL="docker run --rm --privileged -v /:/host -e HOST=/host -e IMAGE=IMAGE -e NAME=NAME IMAGE /usr/bin/uninstall.sh"
-LABEL RUN="docker run -d -p 4001:4001 -p 7001:7001 etcd"
+LABEL RUN="docker run -d -p 4001:4001 -p 7001:7001 --privileged -v /var/lib/etcd:/var/lib/etcd etcd"
 
 ADD root /
 
